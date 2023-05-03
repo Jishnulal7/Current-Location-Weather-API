@@ -22,15 +22,19 @@ class _DisplayWeatherState extends State<DisplayWeather> {
 
   void setData(dynamic weatherData) {
     setState(() {
-       temp = weatherData['main']['temp'];
-       desc = weatherData['weather'][0]['description'];
-       cityName = weatherData['name'];
+      temp = weatherData['main']['temp'];
+      desc = weatherData['weather'][0]['description'];
+      cityName = weatherData['name'];
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Weather API'),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(left: 75),
         child: Column(
