@@ -25,6 +25,7 @@ class _WeatherUiState extends State<WeatherUi> {
 
   void getData() async {
 
+    // For requesing Persmission in Mobile
     await Geolocator.checkPermission();
     await Geolocator.requestPermission();
 
